@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,24 +16,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 15%;
 
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 45 100% 51%;  /* Gold/Yellow #FFC107 */
+    --primary-foreground: 0 0% 0%;  /* Black text on yellow */
 
-    --secondary: 0 0% 95%;
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 0 0% 20%;  /* Dark charcoal */
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 95%;
+    --muted: 0 0% 96%;  /* Soft gray */
     --muted-foreground: 0 0% 40%;
 
-    --accent: 0 0% 95%;
-    --accent-foreground: 0 0% 15%;
+    --accent: 45 100% 51%;  /* Gold accent */
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 0 0% 50%;
+    --ring: 45 100% 51%;  /* Gold ring */
 
     --radius: 0.5rem;
   }
@@ -51,7 +51,8 @@
   }
 
   body {
-    @apply bg-white text-foreground font-space;
+    @apply bg-white text-foreground;
+    font-family: 'Poppins', sans-serif;
   }
 }
 

@@ -1,36 +1,32 @@
 
 import PageLayout from '@/components/PageLayout';
-import Hero from '@/components/Hero';
-import Features from '@/components/Features';
-import Projects from '@/components/Projects';
-import WhyWrlds from '@/components/WhyWrlds';
-import BlogPreview from '@/components/BlogPreview';
+import RoofingHero from '@/components/RoofingHero';
+import RoofingAbout from '@/components/RoofingAbout';
+import RoofingServices from '@/components/RoofingServices';
+import RoofingTestimonials from '@/components/RoofingTestimonials';
+import RoofingMap from '@/components/RoofingMap';
+import RoofingContact from '@/components/RoofingContact';
 import SEO from '@/components/SEO';
-import { useEffect } from 'react';
 
 const Index = () => {
-  // Fix any ID conflicts when the page loads
-  useEffect(() => {
-    const contactElements = document.querySelectorAll('[id="contact"]');
-    if (contactElements.length > 1) {
-      // If there are multiple elements with id="contact", rename one
-      contactElements[1].id = 'contact-footer';
-    }
-  }, []);
-
   return (
-    <PageLayout>
+    <PageLayout showContact={false}>
       <SEO 
-        title="WRLDS - Smart Textile Technology" 
-        description="WRLDS Technologies: Pioneering smart engineering solutions with textile sensors for sports, safety, and performance monitoring."
-        imageUrl="/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
-        keywords={['smart textiles', 'wearable technology', 'textile sensors', 'sports tech', 'safety monitoring', 'performance analytics', 'manufacturing']}
+        title="Storm Line Roofing Stantonbury - 24/7 Emergency Roofing Services" 
+        description="Professional roofing services in Milton Keynes. From emergency leak repairs to complete roof installations. ⭐ 5.0 rated ⭐ Call 01908 966122"
+        imageUrl="/lovable-uploads/52b73825-b41a-4013-a32a-70cd763acb1f.png"
+        keywords={['roofing services', 'roof repairs', 'Milton Keynes roofers', 'emergency roof repair', 'Stantonbury roofing', 'roof replacement', 'gutter repairs']}
       />
-      <Hero />
-      <Features />
-      <WhyWrlds />
-      <Projects />
-      <BlogPreview />
+      <RoofingHero />
+      <div id="about">
+        <RoofingAbout />
+      </div>
+      <RoofingServices />
+      <div id="testimonials">
+        <RoofingTestimonials />
+      </div>
+      <RoofingMap />
+      <RoofingContact />
     </PageLayout>
   );
 };
