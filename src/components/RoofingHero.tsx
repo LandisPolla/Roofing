@@ -12,7 +12,7 @@ const RoofingHero = () => {
   };
 
   return (
-    <div className="relative w-full h-[70vh] min-h-[500px] bg-gradient-to-r from-secondary to-secondary/90 overflow-hidden">
+    <div className="relative w-full h-[70vh] min-h-[500px] bg-gradient-to-r from-secondary to-secondary/90 overflow-hidden mt-20">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black/20"></div>
       
@@ -51,7 +51,7 @@ const RoofingHero = () => {
             <Button 
               onClick={() => window.open('tel:01908966122', '_self')}
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-black font-bold text-lg px-8 py-4"
+              className="border-white text-black bg-white font-bold text-lg px-8 py-4"
               size="lg"
             >
               <Phone className="w-5 h-5 mr-2" />
